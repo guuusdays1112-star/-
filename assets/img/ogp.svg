@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="ガラス工房 nazuna薺">
+  <defs>
+    <linearGradient id="g41" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dff0ef"/>
+      <stop offset="100%" stop-color="#9fcbc8"/>
+    </linearGradient>
+    <filter id="b41" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g41)"/>
+  <g filter="url(#b41)"><circle cx="480" cy="179" r="84" fill="#9fcbc8" opacity="0.40"/><circle cx="679" cy="411" r="133" fill="#2f6f78" opacity="0.27"/><circle cx="833" cy="354" r="161" fill="#9fcbc8" opacity="0.34"/><circle cx="942" cy="284" r="83" fill="#2f6f78" opacity="0.22"/><circle cx="825" cy="147" r="145" fill="#9fcbc8" opacity="0.33"/></g>
+  <rect width="1200" height="630" fill="none" stroke="#2f6f78" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="600" y="315" fill="#2f6f78" fill-opacity="0.72"
+        font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="26"
+        letter-spacing="3.1" text-anchor="middle" dominant-baseline="middle">ガラス工房 nazuna薺</text>
+</svg>

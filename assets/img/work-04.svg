@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="作品写真 04">
+  <defs>
+    <linearGradient id="g34" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7ecda"/>
+      <stop offset="100%" stop-color="#e0c08a"/>
+    </linearGradient>
+    <filter id="b34" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="44"/>
+    </filter>
+  </defs>
+  <rect width="800" height="800" fill="url(#g34)"/>
+  <g filter="url(#b34)"><circle cx="419" cy="455" r="215" fill="#e0c08a" opacity="0.40"/><circle cx="657" cy="313" r="232" fill="#a9762c" opacity="0.28"/><circle cx="270" cy="141" r="162" fill="#e0c08a" opacity="0.22"/><circle cx="248" cy="471" r="204" fill="#a9762c" opacity="0.36"/><circle cx="122" cy="119" r="121" fill="#e0c08a" opacity="0.31"/></g>
+  <rect width="800" height="800" fill="none" stroke="#a9762c" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="400" y="400" fill="#a9762c" fill-opacity="0.72"
+        font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="33"
+        letter-spacing="4.0" text-anchor="middle" dominant-baseline="middle">作品写真 04</text>
+</svg>

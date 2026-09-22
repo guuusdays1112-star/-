@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="虹色とんぼ玉">
+  <defs>
+    <linearGradient id="g21" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6e6e6"/>
+      <stop offset="100%" stop-color="#dcafb0"/>
+    </linearGradient>
+    <filter id="b21" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="33"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#g21)"/>
+  <g filter="url(#b21)"><circle cx="175" cy="391" r="136" fill="#dcafb0" opacity="0.29"/><circle cx="209" cy="440" r="157" fill="#8f4d52" opacity="0.30"/><circle cx="403" cy="173" r="60" fill="#dcafb0" opacity="0.27"/><circle cx="457" cy="93" r="155" fill="#8f4d52" opacity="0.24"/><circle cx="220" cy="80" r="180" fill="#dcafb0" opacity="0.36"/></g>
+  <rect width="800" height="600" fill="none" stroke="#8f4d52" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="400" y="300" fill="#8f4d52" fill-opacity="0.72"
+        font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="25"
+        letter-spacing="3.0" text-anchor="middle" dominant-baseline="middle">虹色とんぼ玉</text>
+</svg>

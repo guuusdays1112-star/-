@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="ティースプーン／マドラー">
+  <defs>
+    <linearGradient id="g23" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7ecda"/>
+      <stop offset="100%" stop-color="#e0c08a"/>
+    </linearGradient>
+    <filter id="b23" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="33"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#g23)"/>
+  <g filter="url(#b23)"><circle cx="686" cy="515" r="167" fill="#e0c08a" opacity="0.20"/><circle cx="462" cy="263" r="124" fill="#a9762c" opacity="0.21"/><circle cx="193" cy="273" r="87" fill="#e0c08a" opacity="0.29"/><circle cx="81" cy="101" r="145" fill="#a9762c" opacity="0.28"/><circle cx="408" cy="412" r="103" fill="#e0c08a" opacity="0.19"/></g>
+  <rect width="800" height="600" fill="none" stroke="#a9762c" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="400" y="300" fill="#a9762c" fill-opacity="0.72"
+        font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="25"
+        letter-spacing="3.0" text-anchor="middle" dominant-baseline="middle">ティースプーン／マドラー</text>
+</svg>
