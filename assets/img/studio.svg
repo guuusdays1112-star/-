@@ -1,17 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" width="900" height="1100" role="img" aria-label="町家の工房">
   <defs>
-    <linearGradient id="g12" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#eeeae3"/>
-      <stop offset="100%" stop-color="#c5bdb0"/>
+    <linearGradient id="g12" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#ebe7db"/>
+      <stop offset="100%" stop-color="#bdb49c"/>
     </linearGradient>
     <filter id="b12" x="-25%" y="-25%" width="150%" height="150%">
-      <feGaussianBlur stdDeviation="50"/>
+      <feGaussianBlur stdDeviation="54"/>
     </filter>
   </defs>
   <rect width="900" height="1100" fill="url(#g12)"/>
-  <g filter="url(#b12)"><circle cx="431" cy="689" r="210" fill="#c5bdb0" opacity="0.21"/><circle cx="80" cy="440" r="139" fill="#5d564e" opacity="0.37"/><circle cx="594" cy="639" r="190" fill="#c5bdb0" opacity="0.34"/><circle cx="182" cy="497" r="119" fill="#5d564e" opacity="0.40"/><circle cx="116" cy="831" r="103" fill="#c5bdb0" opacity="0.34"/></g>
-  <rect width="900" height="1100" fill="none" stroke="#5d564e" stroke-opacity="0.18" stroke-width="2"/>
-  <text x="450" y="550" fill="#5d564e" fill-opacity="0.72"
-        font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="37"
-        letter-spacing="4.4" text-anchor="middle" dominant-baseline="middle">町家の工房</text>
+  <g filter="url(#b12)"><circle cx="430" cy="696" r="195" fill="#bdb49c" opacity="0.19"/><circle cx="63" cy="434" r="128" fill="#5f5744" opacity="0.35"/><circle cx="601" cy="644" r="176" fill="#bdb49c" opacity="0.32"/><circle cx="169" cy="495" r="109" fill="#5f5744" opacity="0.38"/><circle cx="101" cy="845" r="94" fill="#bdb49c" opacity="0.32"/><circle cx="321" cy="462" r="225" fill="#5f5744" opacity="0.16"/></g>
+  <text x="450" y="550" fill="#5f5744" fill-opacity="0.66"
+        font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="36"
+        letter-spacing="5.0" text-anchor="middle" dominant-baseline="middle">町家の工房</text>
 </svg>

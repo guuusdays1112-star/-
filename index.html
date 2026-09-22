@@ -13,11 +13,11 @@
 <meta property="og:url" content="https://example.com/">
 <meta property="og:image" content="https://example.com/assets/img/ogp.svg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#faf7f1">
+<meta name="theme-color" content="#f1ede0">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <script type="application/ld+json">
 {
@@ -85,8 +85,8 @@
     <div class="wrap hero__inner">
       <div>
         <p class="hero__lead">KYOTO NISHIJIN GLASS STUDIO</p>
-        <h1 class="hero__title">火と息でつくる、<br><span class="em">草花のような</span>ガラス。</h1>
-        <p class="hero__text">京都・西陣の町家にある、小さなガラス工房です。バーナーでガラスを溶かし、空や海、草や生きものからかたちを写しとるように制作しています。工房は、教室とお店を兼ねた場所。はじめての方も、その日のうちに自分の一点を持ち帰れます。</p>
+        <h1 class="hero__title">火をくぐると、<br><span class="em">ガラスは草花になる。</span></h1>
+        <p class="hero__text">京都・西陣の町家にある、小さなガラス工房です。バーナーの火でガラスを溶かし、草や実、空や海の色を写しとっています。つくるのは、手のひらにのるくらいのものばかり。工房は教室とお店を兼ねた場所で、はじめての方も、その日のうちに自分の一点を持ち帰れます。</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="https://select-type.com/rsv/?id=DoIrvfD4i6k&amp;c_id=263918&amp;w_flg=1" target="_blank" rel="noopener">体験を予約する</a>
           <a class="btn btn--ghost" href="experience.html">体験メニューを見る</a>
@@ -98,7 +98,9 @@
         </p>
       </div>
       <div class="hero__figure">
-        <img src="assets/img/hero.svg" alt="工房でガラスを制作している様子" width="1280" height="960" fetchpriority="high">
+        <div class="arch">
+          <img src="assets/img/hero.svg" alt="工房でガラスを制作している様子" width="1280" height="960" fetchpriority="high">
+        </div>
       </div>
     </div>
   </section>
@@ -112,18 +114,28 @@
       </div>
       <ul class="feature-grid reveal">
         <li class="feature">
-          <span class="feature__num">01</span>
-          <h3 class="feature__title">はじめてでも、本格的に</h3>
-          <p class="feature__text">バーナーでガラス棒を溶かす「バーナーワーク」を、工程ごとに手を添えてご案内します。経験がなくても、道具の持ち方からお伝えします。</p>
+          <svg class="feature__icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 6c4.5 6 9.5 9.5 9.5 16.5a9.5 9.5 0 1 1-19 0c0-4 2-6.5 4.5-9.5 1 2 2 3 3.5 3.5C18.5 12 20 9 22 6z"/>
+            <path d="M22 33.5a4.5 4.5 0 0 1-4.5-4.5c0-2.2 1.8-3.4 2.7-5.2.9 1.4 1.8 2.1 3 2.6"/>
+          </svg>
+          <h3 class="feature__title">火のあつかいから、お伝えします</h3>
+          <p class="feature__text">バーナーでガラス棒を溶かす「バーナーワーク」を、工程ごとに手を添えてご案内します。火に触れるのがはじめてでも大丈夫です。</p>
         </li>
         <li class="feature">
-          <span class="feature__num">02</span>
-          <h3 class="feature__title">その日のうちに持ち帰れます</h3>
-          <p class="feature__text">つくった作品は、冷ましたあとその日のうちにお持ち帰りいただけます。旅の途中でも、荷物が増える心配だけで済みます。</p>
+          <svg class="feature__icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="22" cy="17" r="5.5"/>
+            <path d="M7 23c0 8 6.7 14 15 14s15-6 15-14"/>
+            <path d="M12 28.5c2.8 2 6 3 10 3s7.2-1 10-3"/>
+          </svg>
+          <h3 class="feature__title">その日のうちに、手のひらに</h3>
+          <p class="feature__text">つくったものは、冷ましたあとその日のうちにお渡しします。旅の途中でも、増えるのは小さな荷物ひとつだけです。</p>
         </li>
         <li class="feature">
-          <span class="feature__num">03</span>
-          <h3 class="feature__title">町家の工房で、少人数で</h3>
+          <svg class="feature__icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11 37V20.5a11 11 0 0 1 22 0V37z"/>
+            <path d="M22 9.5V37M11 25.5h22"/>
+          </svg>
+          <h3 class="feature__title">町家の、火のある部屋で</h3>
           <p class="feature__text">西陣の町家を工房にしています。少人数で火に向かう時間なので、急かされることなく、ご自分のペースで進められます。</p>
         </li>
       </ul>
@@ -133,7 +145,14 @@
   <section class="section section--alt" aria-labelledby="menu-title">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="section-head__en">EXPERIENCE</span>
+        <svg class="sprig" viewBox="0 0 120 26" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 14h36"/><path d="M116 14H80"/>
+        <path d="M60 23c-6-2-9.5-6-10-11.5 5.5.5 9 4.5 10 11.5z"/>
+        <path d="M60 23c6-2 9.5-6 10-11.5-5.5.5-9 4.5-10 11.5z"/>
+        <path d="M60 23V9"/>
+        <circle cx="60" cy="6" r="2.4"/>
+      </svg>
+        <span class="section-head__en" style="margin-top:1.4em;">EXPERIENCE</span>
         <h2 class="section-head__title" id="menu-title">体験メニュー</h2>
         <p class="section-head__text">30分のプチ体験から、2時間かけてつくる風鈴まで。ご予算とお時間に合わせてお選びいただけます。</p>
       </div>
@@ -185,14 +204,26 @@
         <li><figure><div class="gallery__frame"><img src="assets/img/work-05.svg" alt="ガラスの作品" width="800" height="800" loading="lazy"></div></figure></li>
         <li><figure><div class="gallery__frame"><img src="assets/img/work-06.svg" alt="ガラスの作品" width="800" height="800" loading="lazy"></div></figure></li>
       </ul>
-      <p class="btn-row reveal" style="margin-top:36px;"><a class="btn btn--ghost" href="works.html">作品をもっと見る</a></p>
+      <div class="lifesize reveal" style="margin-top:40px;">
+        <div class="lifesize__col">
+          <div class="lifesize__bead" aria-hidden="true"></div>
+          <p class="lifesize__cap">実寸 約14mm</p>
+        </div>
+        <div>
+          <h3>手のひらの中の、小さな景色</h3>
+          <p>とんぼ玉の多くは、直径14mmほど。この画面に出ている丸が、だいたいの実寸です。近づいて覗きこむと、中に草や水や光が入っているのが見えます。作品はいつも、そのくらいの大きさのものばかりです。</p>
+        </div>
+      </div>
+      <p class="btn-row reveal" style="margin-top:32px;"><a class="btn btn--ghost" href="works.html">作品をもっと見る</a></p>
     </div>
   </section>
 
   <section class="section section--alt" aria-labelledby="about-title">
     <div class="wrap profile">
       <div class="profile__figure reveal">
-        <img src="assets/img/studio.svg" alt="西陣の町家にある工房の外観" width="900" height="1100" loading="lazy">
+        <div class="arch">
+          <img src="assets/img/studio.svg" alt="西陣の町家にある工房の外観" width="900" height="1100" loading="lazy">
+        </div>
       </div>
       <div class="reveal">
         <div class="section-head">
@@ -200,7 +231,7 @@
           <h2 class="section-head__title" id="about-title">工房について</h2>
         </div>
         <p>2005年、京都・西陣の町家に工房を構えました。工房であり、お店であり、教室でもある小さな場所です。バーナーワークという、ガラス棒を火で溶かしてかたちにする技法で制作しています。</p>
-        <p>作品のテーマは、いつも自然のなかにあります。雨あがりの空の色、海の底の暗さ、名前を知らない草の実。ガラスは、その一瞬を閉じ込めたまま固まってくれる素材です。</p>
+        <p>作品のテーマは、いつも自然のなかにあります。雨あがりの空の色、海の底の暗さ、名前を知らない草の実。ガラスは、熱いあいだだけ言うことを聞いてくれて、冷めた瞬間に、その一瞬を閉じ込めたまま動かなくなります。</p>
         <p class="btn-row"><a class="btn btn--ghost" href="about.html">工房のことをもっと読む</a></p>
       </div>
     </div>
@@ -236,6 +267,13 @@
 
   <section class="cta-band">
     <div class="wrap wrap--narrow">
+      <svg class="sprig" viewBox="0 0 120 26" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 14h36"/><path d="M116 14H80"/>
+        <path d="M60 23c-6-2-9.5-6-10-11.5 5.5.5 9 4.5 10 11.5z"/>
+        <path d="M60 23c6-2 9.5-6 10-11.5-5.5.5-9 4.5-10 11.5z"/>
+        <path d="M60 23V9"/>
+        <circle cx="60" cy="6" r="2.4"/>
+      </svg>
       <h2>火のまえに座る時間を、旅の一日に。</h2>
       <p>体験はご予約優先です。当日でも空きがあればご案内できますので、お電話ください。</p>
       <div class="btn-row" style="justify-content:center;">

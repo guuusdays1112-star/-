@@ -1,13 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="ガラス工房 nazuna薺">
   <defs>
-    <linearGradient id="bead" x1="0.2" y1="0" x2="0.85" y2="1">
-      <stop offset="0%" stop-color="#dff0ef"/>
-      <stop offset="55%" stop-color="#6fa9ac"/>
-      <stop offset="100%" stop-color="#235159"/>
-    </linearGradient>
+    <radialGradient id="bead" cx="0.36" cy="0.30" r="0.78">
+      <stop offset="0%" stop-color="#fdf6e4"/>
+      <stop offset="45%" stop-color="#b9cfa4"/>
+      <stop offset="100%" stop-color="#46704a"/>
+    </radialGradient>
   </defs>
-  <rect width="64" height="64" rx="12" fill="#faf7f1"/>
-  <circle cx="32" cy="33" r="20" fill="url(#bead)"/>
-  <ellipse cx="25" cy="25" rx="6.5" ry="4.2" fill="#ffffff" opacity="0.75" transform="rotate(-32 25 25)"/>
-  <path d="M32 13c0 6-4 9-4 13s4 5 4 5" fill="none" stroke="#faf7f1" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
+  <rect width="64" height="64" rx="13" fill="#f1ede0"/>
+  <circle cx="32" cy="34" r="19" fill="url(#bead)"/>
+  <path d="M32 44c0-7 0-11 0-15" fill="none" stroke="#fdf9ec" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <path d="M32 31c-5-1-7-4-7-7 4 0 7 3 7 7z" fill="#fdf9ec" opacity="0.9"/>
+  <path d="M32 34c5-1 7-4 7-8-4 0-7 4-7 8z" fill="#fdf9ec" opacity="0.75"/>
+  <ellipse cx="25" cy="26" rx="5.4" ry="3.4" fill="#ffffff" opacity="0.6" transform="rotate(-32 25 26)"/>
 </svg>

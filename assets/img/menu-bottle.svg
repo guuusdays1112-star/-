@@ -1,17 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="シャボン玉小びん">
   <defs>
-    <linearGradient id="g24" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#dff0ef"/>
-      <stop offset="100%" stop-color="#9fcbc8"/>
+    <linearGradient id="g24" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#dfeceb"/>
+      <stop offset="100%" stop-color="#a0c6c1"/>
     </linearGradient>
     <filter id="b24" x="-25%" y="-25%" width="150%" height="150%">
-      <feGaussianBlur stdDeviation="33"/>
+      <feGaussianBlur stdDeviation="36"/>
     </filter>
   </defs>
   <rect width="800" height="600" fill="url(#g24)"/>
-  <g filter="url(#b24)"><circle cx="543" cy="463" r="82" fill="#9fcbc8" opacity="0.42"/><circle cx="194" cy="382" r="71" fill="#2f6f78" opacity="0.36"/><circle cx="166" cy="399" r="147" fill="#9fcbc8" opacity="0.36"/><circle cx="361" cy="476" r="179" fill="#2f6f78" opacity="0.21"/><circle cx="411" cy="520" r="149" fill="#9fcbc8" opacity="0.29"/></g>
-  <rect width="800" height="600" fill="none" stroke="#2f6f78" stroke-opacity="0.18" stroke-width="2"/>
-  <text x="400" y="300" fill="#2f6f78" fill-opacity="0.72"
-        font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="25"
-        letter-spacing="3.0" text-anchor="middle" dominant-baseline="middle">シャボン玉小びん</text>
+  <g filter="url(#b24)"><circle cx="549" cy="471" r="75" fill="#a0c6c1" opacity="0.40"/><circle cx="185" cy="386" r="64" fill="#3c7570" opacity="0.34"/><circle cx="155" cy="404" r="137" fill="#a0c6c1" opacity="0.34"/><circle cx="359" cy="484" r="167" fill="#3c7570" opacity="0.19"/><circle cx="412" cy="531" r="138" fill="#a0c6c1" opacity="0.27"/><circle cx="262" cy="528" r="64" fill="#3c7570" opacity="0.34"/></g>
+  <text x="400" y="300" fill="#3c7570" fill-opacity="0.66"
+        font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="24"
+        letter-spacing="3.4" text-anchor="middle" dominant-baseline="middle">シャボン玉小びん</text>
 </svg>
