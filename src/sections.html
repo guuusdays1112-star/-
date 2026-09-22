@@ -1,53 +1,9 @@
-<!doctype html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>喫茶ゆすらご｜京都・仁和寺街道の京町家の喫茶店</title>
-<meta name="description" content="京都市上京区、仁和寺街道ぞいの京町家。緑につつまれた小さな喫茶店「喫茶ゆすらご」。ワンプレートごはん、カレー、生ソーダ、かき氷。12時〜22時ごろ・不定休。">
-<meta name="theme-color" content="#4c6b48">
-<link rel="canonical" href="https://yusurago.blogspot.com/">
-<meta property="og:site_name" content="喫茶ゆすらご">
-<meta property="og:title" content="喫茶ゆすらご｜京都・仁和寺街道の京町家の喫茶店">
-<meta property="og:description" content="緑につつまれた京町家の喫茶店。靴を脱いで畳に上がって、ゆっくりしていってください。">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://yusurago.blogspot.com/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%234c6b48'/%3E%3Crect x='3' y='6' width='8' height='7' fill='%23f4efdf'/%3E%3Crect x='11' y='8' width='2' height='1' fill='%23f4efdf'/%3E%3Crect x='12' y='9' width='1' height='2' fill='%23f4efdf'/%3E%3Crect x='11' y='11' width='2' height='1' fill='%23f4efdf'/%3E%3Crect x='2' y='13' width='10' height='1' fill='%23d69a45'/%3E%3C/svg%3E">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"CafeOrCoffeeShop",
-  "name":"喫茶ゆすらご",
-  "url":"https://yusurago.blogspot.com/",
-  "telephone":"+81-70-5266-9616",
-  "address":{
-    "@type":"PostalAddress",
-    "postalCode":"602-8344",
-    "addressRegion":"京都府",
-    "addressLocality":"京都市上京区",
-    "streetAddress":"仁和寺街道七本松西入二番町199-1",
-    "addressCountry":"JP"
-  },
-  "openingHours":"Mo-Su 12:00-22:00",
-  "servesCuisine":"喫茶",
-  "sameAs":[
-    "https://www.instagram.com/fumu96/",
-    "https://www.threads.com/@fumu96"
-  ]
-}
-</script>
-</head>
-<body>
 <a class="skip" href="#main">本文へスキップ</a>
 
 <!-- ============ ヘッダー ============ -->
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a class="logo" href="#top">
+    <a class="logo" href="{{HOME}}#top">
       <svg class="logo__mark" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">
         <rect width="16" height="16" fill="#4c6b48"/>
         <rect x="3" y="6" width="8" height="7" fill="#f4efdf"/>
@@ -66,17 +22,17 @@
     </a>
     <nav class="nav" aria-label="メインメニュー">
       <ul>
-        <li><a href="#about">店のこと</a></li>
-        <li><a href="#menu">お品書き</a></li>
-        <li><a href="#room">店内</a></li>
-        <li><a href="#info">営業案内</a></li>
-        <li><a href="#diary">日記</a></li>
+        <li><a href="{{HOME}}#about">店のこと</a></li>
+        <li><a href="{{HOME}}#menu">お品書き</a></li>
+        <li><a href="{{HOME}}#room">店内</a></li>
+        <li><a href="{{HOME}}#info">営業案内</a></li>
+        <li><a href="{{HOME}}#diary">日記</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-
+<!--HOMEONLY:START-->
 <!-- ============ ヒーロー ============ -->
 <section class="hero" id="top">
   <div class="wrap hero__inner">
@@ -122,11 +78,11 @@
     </ul>
   </div>
 </section>
-
+<!--HOMEONLY:END-->
 
 <main id="main">
 
-
+<!--HOMEONLY:START-->
 <!-- ============ 店のこと ============ -->
 <section class="section" id="about">
   <div class="wrap">
@@ -355,19 +311,19 @@
     </div>
   </div>
 </section>
-
+<!--HOMEONLY:END-->
 
 <!-- ============ 日記 ============ -->
 <section class="section" id="diary">
   <div class="wrap">
-
+<!--HOMEONLY:START-->
     <div class="section__head">
       <span class="section__label">DIARY</span>
       <h2 class="section__title">日記</h2>
     </div>
+<!--HOMEONLY:END-->
 
-
-
+<!--STATIC:START-->
     <div class="posts">
       <a class="post" href="https://yusurago.blogspot.com/search/label/%E5%96%B6%E6%A5%AD%E6%97%A5">
         <span class="post__date">営業日</span>
@@ -386,9 +342,52 @@
       </a>
     </div>
     <p class="center"><a class="btn" href="https://yusurago.blogspot.com/">日記をぜんぶ読む</a></p>
+<!--STATIC:END-->
 
+<!--BLOGGER:START-->
+    <b:section id='diarybody' showaddelement='no'>
+      <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog' version='1'>
+        <b:includable id='main'>
+          <b:if cond='data:blog.pageType == &quot;index&quot;'>
+            <div class='posts'>
+              <b:loop values='data:posts' var='post'>
+                <a class='post' expr:href='data:post.url'>
+                  <span class='post__date'><data:post.timestamp/></span>
+                  <span class='post__title'><data:post.title/></span>
+                  <span class='post__more'>つづきを読む →</span>
+                </a>
+              </b:loop>
+            </div>
+          <b:else/>
+            <b:loop values='data:posts' var='post'>
+              <article class='win entry'>
+                <div class='win__bar'>
+                  <span><data:post.timestamp/></span>
+                  <span class='win__dots' aria-hidden='true'><i></i><i></i><i></i></span>
+                </div>
+                <div class='win__body'>
+                  <h1 class='entry__title'><data:post.title/></h1>
+                  <div class='entry__body'><data:post.body/></div>
+                </div>
+              </article>
+            </b:loop>
+          </b:if>
 
-
+          <div class='pager'>
+            <b:if cond='data:newerPageUrl'>
+              <a class='btn' expr:href='data:newerPageUrl'>← 新しい日記</a>
+            </b:if>
+            <b:if cond='data:blog.pageType != &quot;index&quot;'>
+              <a class='btn' expr:href='data:blog.homepageUrl'>トップへもどる</a>
+            </b:if>
+            <b:if cond='data:olderPageUrl'>
+              <a class='btn' expr:href='data:olderPageUrl'>古い日記 →</a>
+            </b:if>
+          </div>
+        </b:includable>
+      </b:widget>
+    </b:section>
+<!--BLOGGER:END-->
   </div>
 </section>
 
@@ -418,19 +417,3 @@
     <p class="copyright">© 喫茶ゆすらご　—　ごゆっくりどうぞ</p>
   </div>
 </footer>
-<script>
-/* 90年代の個人サイト風カウンター。
-   自分のブラウザに記録した「何回目のご来訪か」を表示するだけの飾りです。 */
-(function(){
-  var el=document.getElementById('visits');
-  if(!el) return;
-  var n=1;
-  try{
-    n=(parseInt(localStorage.getItem('yusurago.visits'),10)||0)+1;
-    localStorage.setItem('yusurago.visits',n);
-  }catch(e){/* プライベートモード等では数えられないので 1 のまま */}
-  el.textContent=String(n).padStart(7,'0');
-})();
-</script>
-</body>
-</html>
