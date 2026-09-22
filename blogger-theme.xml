@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<meta content='#4c6b48' name='theme-color'/>
+<b:include data='blog' name='all-head-content'/>
+<title><data:blog.pageTitle/></title>
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=DotGothic16&amp;family=Shippori+Mincho+B1:wght@500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap' rel='stylesheet'/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%234c6b48'/%3E%3Crect x='3' y='6' width='8' height='7' fill='%23f4efdf'/%3E%3Crect x='2' y='13' width='10' height='1' fill='%23d69a45'/%3E%3C/svg%3E" rel='icon'/>
+
+<b:skin><![CDATA[
+/* =========================================================
+   ゆすらご ｜ 喫茶店ホームページ
+   やわらかい緑 × 昭和レトロ喫茶 × ちょっとレトロPC
+   ---------------------------------------------------------
+   このファイルがデザインの唯一の出典です。
+   色や余白を変えたいときはまず :root の変数をいじってください。
+   ========================================================= */
+
+/* ---------- 1. トークン ---------- */
+:root{
+  /* 緑（やわらかめ） */
+  --deep:#22331f;
+  --moss:#4c6b48;
+  --leaf:#6f9163;
+  --sage:#9db894;
+  --pale:#d9e3cd;
+  /* 紙 */
+  --cream:#f4efdf;
+  --paper:#fcf9f0;
+  /* 墨 */
+  --ink:#2c332a;
+  --ink-soft:#5d6757;
+  /* さし色 */
+  --amber:#d69a45;      /* プリン */
+  --vermilion:#b95440;  /* ナポリタン */
+  --soda:#4fa39a;       /* クリームソーダ */
+
+  --bg:var(--cream);
+  --surface:var(--paper);
+  --text:var(--ink);
+  --muted:var(--ink-soft);
+  --frame:var(--deep);
+  --line:rgba(34,51,31,.18);
+  --bar-a:var(--moss);
+  --bar-b:var(--leaf);
+  --bar-text:#f4efdf;
+  --shadow-color:var(--sage);
+
+  --mincho:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --gothic:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --dot:"DotGothic16","Hiragino Sans",monospace;
+
+  --maxw:1060px;
+  --gutter:16px;
+}
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#161e15;
+    --surface:#1e2a1c;
+    --text:#e6ecdd;
+    --muted:#a9b9a2;
+    --frame:#86a67c;
+    --line:rgba(230,236,221,.22);
+    --pale:#2c3b28;
+    --bar-a:#2f4a2c;
+    --bar-b:#3e5c39;
+    --shadow-color:#33492f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#161e15;
+  --surface:#1e2a1c;
+  --text:#e6ecdd;
+  --muted:#a9b9a2;
+  --frame:#86a67c;
+  --line:rgba(230,236,221,.22);
+  --pale:#2c3b28;
+  --bar-a:#2f4a2c;
+  --bar-b:#3e5c39;
+  --shadow-color:#33492f;
+}
+
+/* ---------- 2. 土台 ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background-color:var(--bg);
+  /* 方眼紙のようなうっすらした地紋 */
+  background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:28px 28px,28px 28px;
+  background-position:-1px -1px,-1px -1px;
+  color:var(--text);
+  font-family:var(--gothic);
+  font-size:16px;
+  line-height:1.9;
+  letter-spacing:.04em;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--mincho);font-weight:700;line-height:1.45;letter-spacing:.08em;margin:0}
+p{margin:0 0 1em}
+ul{margin:0;padding:0;list-style:none}
+
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;z-index:99;background:var(--surface);border:2px solid var(--frame);padding:.5em 1em}
+:where(a,button):focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+/* ---------- 3. ヘッダー ---------- */
+.site-header{
+  position:sticky;top:0;z-index:20;
+  background:var(--surface);
+  border-bottom:2px solid var(--frame);
+  box-shadow:0 2px 0 var(--shadow-color);
+}
+.site-header__inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1em;min-height:60px;
+}
+.logo{display:flex;align-items:center;gap:.6em;text-decoration:none}
+.logo__mark{width:30px;height:30px;flex:none}
+.logo__name{font-family:var(--mincho);font-size:1.25rem;letter-spacing:.18em}
+.logo__roma{font-family:var(--dot);font-size:.68rem;color:var(--muted);letter-spacing:.18em;display:block;line-height:1}
+
+.nav{overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav ul{display:flex;gap:.2em;white-space:nowrap}
+.nav a{
+  display:block;text-decoration:none;
+  font-family:var(--dot);font-size:.9rem;letter-spacing:.1em;
+  padding:.45em .7em;border:1px solid transparent;
+}
+.nav a:hover,.nav a:focus-visible{border-color:var(--frame);background:var(--pale)}
+
+/* ---------- 4. ヒーロー ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  border-bottom:2px solid var(--frame);
+  background:
+    radial-gradient(120% 90% at 20% 0%,rgba(157,184,148,.55),transparent 60%),
+    linear-gradient(160deg,var(--moss),var(--deep));
+  color:#f4efdf;
+}
+/* ブラウン管のような走査線 */
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(rgba(0,0,0,.14) 0 1px,transparent 1px 4px);
+  mix-blend-mode:multiply;opacity:.5;
+}
+.hero__inner{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr auto;align-items:center;gap:2em;
+  padding-block:clamp(48px,9vw,96px);
+}
+.hero__eyebrow{
+  font-family:var(--dot);font-size:.8rem;letter-spacing:.22em;
+  color:var(--pale);margin:0 0 1.2em;
+}
+.hero__title{
+  font-size:clamp(2.6rem,9vw,4.4rem);letter-spacing:.16em;margin:0 0 .3em;
+  text-shadow:3px 3px 0 rgba(34,51,31,.45);
+}
+.hero__sub{font-family:var(--dot);font-size:.95rem;letter-spacing:.18em;color:var(--pale);margin:0 0 1.4em}
+.hero__lead{font-size:1.02rem;max-width:26em;margin:0 0 1.8em;color:#eef0e2}
+.cursor{display:inline-block;width:.6em;background:currentColor;color:var(--amber);animation:blink 1.1s steps(1,end) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.7em}
+.hero__art{width:clamp(110px,20vw,180px);height:auto;filter:drop-shadow(4px 4px 0 rgba(34,51,31,.4))}
+
+.btn{
+  display:inline-block;text-decoration:none;
+  font-family:var(--dot);letter-spacing:.12em;font-size:.92rem;
+  padding:.65em 1.3em;border:2px solid var(--deep);
+  background:var(--cream);color:var(--deep);
+  box-shadow:4px 4px 0 var(--deep);
+  transition:transform .08s ease,box-shadow .08s ease;
+}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--deep)}
+.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--deep)}
+.btn--ghost{background:transparent;color:#f4efdf;border-color:#f4efdf;box-shadow:4px 4px 0 rgba(34,51,31,.5)}
+
+/* ---------- 5. お知らせ帯 ---------- */
+.notice{
+  background:var(--pale);border-bottom:2px solid var(--frame);
+  font-family:var(--dot);font-size:.88rem;letter-spacing:.08em;
+}
+.notice__inner{display:flex;gap:1em;align-items:baseline;padding-block:.6em;flex-wrap:wrap}
+.notice__tag{
+  flex:none;background:var(--vermilion);color:#fff;
+  padding:.1em .7em;letter-spacing:.14em;
+}
+.notice ul{display:flex;flex-direction:column;gap:.2em}
+.notice li::before{content:"▼ ";color:var(--moss)}
+
+/* ---------- 6. セクション共通 ---------- */
+.section{padding-block:clamp(48px,8vw,88px)}
+.section--tint{background:linear-gradient(var(--pale),transparent)}
+.section__head{margin:0 0 2.2em;text-align:center}
+.section__label{
+  display:block;font-family:var(--dot);font-size:.78rem;
+  letter-spacing:.3em;color:var(--moss);margin-bottom:.5em;
+}
+.section__title{font-size:clamp(1.6rem,4.5vw,2.2rem);letter-spacing:.2em}
+.section__title::after{
+  content:"";display:block;width:56px;height:3px;margin:.6em auto 0;
+  background:repeating-linear-gradient(90deg,var(--moss) 0 6px,transparent 6px 10px);
+}
+
+/* ---------- 7. レトロPC風ウィンドウ ---------- */
+.win{
+  background:var(--surface);
+  border:2px solid var(--frame);
+  box-shadow:6px 6px 0 var(--shadow-color);
+}
+.win__bar{
+  display:flex;align-items:center;gap:.6em;
+  padding:.35em .7em;
+  background:linear-gradient(90deg,var(--bar-a),var(--bar-b));
+  color:var(--bar-text);
+  border-bottom:2px solid var(--frame);
+  font-family:var(--dot);font-size:.82rem;letter-spacing:.14em;
+}
+.win__dots{display:flex;gap:4px;margin-left:auto}
+.win__dots i{width:10px;height:10px;border:1px solid var(--bar-text);display:block}
+.win__body{padding:clamp(20px,4vw,36px)}
+
+/* ---------- 8. 店のこと ---------- */
+.about{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,48px);align-items:start}
+.about__text p:last-child{margin-bottom:0}
+.about__name{font-family:var(--mincho);font-size:1.3rem;letter-spacing:.16em;margin-bottom:.8em}
+.memo{
+  border:2px dashed var(--moss);background:var(--surface);
+  padding:1.2em 1.4em;font-size:.93rem;
+}
+.memo__title{font-family:var(--dot);font-size:.84rem;letter-spacing:.14em;color:var(--moss);margin-bottom:.5em}
+.memo p:last-child{margin-bottom:0}
+
+/* ---------- 9. お品書き ---------- */
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,4vw,40px)}
+.menu-block+.menu-block{margin-top:2em}
+.menu-block__title{
+  font-family:var(--mincho);font-size:1.12rem;letter-spacing:.16em;
+  padding-bottom:.3em;margin-bottom:.8em;
+  border-bottom:2px solid var(--frame);
+}
+.menu-block__title span{font-family:var(--dot);font-size:.7rem;letter-spacing:.2em;color:var(--muted);margin-left:.8em}
+.menu-row{display:flex;align-items:baseline;gap:.5em;padding:.3em 0}
+.menu-row__name{font-size:1rem}
+.menu-row__note{display:block;font-size:.8rem;color:var(--muted);line-height:1.6}
+.menu-row__lead{flex:1 1 auto;min-width:1.5em;border-bottom:1px dotted var(--line);transform:translateY(-.3em)}
+.menu-row__price{flex:none;font-family:var(--dot);font-size:.95rem;letter-spacing:.06em}
+.menu-note{margin-top:1.6em;font-size:.85rem;color:var(--muted)}
+
+/* ---------- 10. 店内（写真枠） ---------- */
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.frame{
+  position:relative;aspect-ratio:4/3;overflow:hidden;
+  border:2px solid var(--frame);background:var(--pale);
+  box-shadow:4px 4px 0 var(--shadow-color);
+}
+.frame img{width:100%;height:100%;object-fit:cover}
+/* 写真がまだ無いとき用の市松模様プレースホルダ */
+.frame--empty{
+  display:grid;place-items:center;
+  background-image:
+    linear-gradient(45deg,var(--sage) 25%,transparent 25%,transparent 75%,var(--sage) 75%),
+    linear-gradient(45deg,var(--sage) 25%,transparent 25%,transparent 75%,var(--sage) 75%);
+  background-size:20px 20px;background-position:0 0,10px 10px;
+  opacity:.75;
+}
+.frame--empty span{
+  font-family:var(--dot);font-size:.78rem;letter-spacing:.14em;
+  background:var(--surface);border:1px solid var(--frame);padding:.3em .8em;
+}
+.frame__cap{
+  position:absolute;left:0;right:0;bottom:0;
+  font-family:var(--dot);font-size:.72rem;letter-spacing:.12em;
+  background:rgba(34,51,31,.82);color:#f4efdf;padding:.3em .6em;
+}
+
+/* ---------- 11. 営業案内 ---------- */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,44px)}
+.hours{width:100%;border-collapse:collapse;font-size:.95rem}
+.hours caption{
+  font-family:var(--dot);font-size:.8rem;letter-spacing:.2em;
+  color:var(--moss);text-align:left;padding-bottom:.6em;
+}
+.hours th,.hours td{border:1px solid var(--line);padding:.55em .8em;text-align:left}
+.hours th{background:var(--pale);font-weight:500;width:7.5em;font-family:var(--dot);font-size:.86rem;letter-spacing:.1em}
+.hours td{font-family:var(--dot);font-size:.9rem}
+.hours .is-closed{color:var(--vermilion)}
+
+.dl{margin:0;font-size:.95rem}
+.dl div{display:grid;grid-template-columns:6.5em 1fr;gap:.6em;padding:.5em 0;border-bottom:1px dotted var(--line)}
+.dl dt{font-family:var(--dot);font-size:.84rem;letter-spacing:.1em;color:var(--moss)}
+.dl dd{margin:0}
+.map{margin-top:1.4em;border:2px solid var(--frame);box-shadow:4px 4px 0 var(--shadow-color)}
+.map iframe{display:block;width:100%;height:280px;border:0}
+
+/* ---------- 12. 日記（ブログ） ---------- */
+.posts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.post{
+  display:flex;flex-direction:column;gap:.4em;
+  text-decoration:none;background:var(--surface);
+  border:2px solid var(--frame);padding:1.1em 1.2em;
+  box-shadow:4px 4px 0 var(--shadow-color);
+  transition:transform .08s ease,box-shadow .08s ease;
+}
+.post:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--shadow-color)}
+.post__date{font-family:var(--dot);font-size:.76rem;letter-spacing:.14em;color:var(--moss)}
+.post__title{font-family:var(--mincho);font-size:1.02rem;letter-spacing:.06em;line-height:1.65}
+.post__more{font-family:var(--dot);font-size:.76rem;color:var(--muted);margin-top:auto}
+.center{text-align:center;margin-top:2.2em}
+
+/* ---------- 13. フッター ---------- */
+.site-footer{
+  border-top:2px solid var(--frame);
+  background:linear-gradient(160deg,var(--moss),var(--deep));
+  color:#e9eedd;padding-block:40px 28px;margin-top:0;
+}
+.footer__grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2em;align-items:start}
+.footer__name{font-family:var(--mincho);font-size:1.4rem;letter-spacing:.2em;margin-bottom:.2em}
+.footer__roma{font-family:var(--dot);font-size:.72rem;letter-spacing:.24em;color:var(--pale)}
+.footer__addr{font-size:.9rem;margin-top:1em;color:#dde5d0}
+.sns{display:flex;gap:.6em;margin-top:1.2em;flex-wrap:wrap}
+.sns a{
+  font-family:var(--dot);font-size:.82rem;letter-spacing:.1em;text-decoration:none;
+  border:1px solid #e9eedd;padding:.35em .8em;
+}
+.sns a:hover{background:#e9eedd;color:var(--deep)}
+.counter{
+  font-family:var(--dot);font-size:.76rem;letter-spacing:.12em;
+  border:1px solid rgba(233,238,221,.5);padding:.6em .8em;display:inline-block;
+}
+.counter b{
+  display:inline-block;background:var(--deep);color:var(--amber);
+  padding:.1em .4em;letter-spacing:.3em;margin-inline:.3em;
+}
+.copyright{
+  margin-top:2.4em;padding-top:1.2em;border-top:1px dotted rgba(233,238,221,.4);
+  font-family:var(--dot);font-size:.72rem;letter-spacing:.1em;color:var(--pale);text-align:center;
+}
+
+/* ---------- 14. レスポンシブ ---------- */
+@media (max-width:860px){
+  .about,.info,.menu-grid,.footer__grid{grid-template-columns:1fr}
+  .posts{grid-template-columns:1fr 1fr}
+  .hero__inner{grid-template-columns:1fr}
+  .hero__art{justify-self:end;margin-top:-1em}
+}
+@media (max-width:600px){
+  .site-header__inner{flex-direction:column;align-items:stretch;gap:.2em;padding-block:.6em}
+  .nav ul{justify-content:flex-start}
+  .gallery,.posts{grid-template-columns:1fr 1fr}
+  .hero__title{letter-spacing:.1em}
+}
+
+/* ---------- 15. 配慮 ---------- */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+}
+@media print{
+  .hero::after,.nav,.site-footer{display:none}
+  body{background:#fff}
+}
+
+
+/* ---------- Blogger 記事本文むけの追記 ---------- */
+.entry{margin-bottom:2em}
+.entry__title{font-size:clamp(1.4rem,4vw,1.9rem);letter-spacing:.12em;margin-bottom:.8em}
+.entry__title a{text-decoration:none}
+.entry__body{line-height:2.05}
+.entry__body img{border:2px solid var(--frame);box-shadow:4px 4px 0 var(--shadow-color);margin:1.4em 0}
+.entry__body h2,.entry__body h3{margin:1.8em 0 .6em}
+.entry__body a{color:var(--moss)}
+.entry__body blockquote{
+  margin:1.4em 0;padding:.8em 1.2em;
+  border-left:4px solid var(--sage);background:var(--pale);
+}
+.pager{display:flex;gap:.8em;justify-content:center;flex-wrap:wrap;margin-top:2.4em}
+.widget-item-control,.quickedit,.post-feeds,.feed-links{display:none}
+]]></b:skin>
+</head>
+
+<body>
+<a class='skip' href='#main'>本文へスキップ</a>
+
+<!-- ============ ヘッダー ============ -->
+<header class='site-header'>
+  <div class='wrap site-header__inner'>
+    <a class='logo' expr:href='data:blog.homepageUrl'>
+      <svg class='logo__mark' shape-rendering='crispEdges' viewBox='0 0 16 16' aria-hidden='true'>
+        <rect width='16' height='16' fill='#4c6b48'/>
+        <rect x='3' y='6' width='8' height='7' fill='#f4efdf'/>
+        <rect x='4' y='7' width='6' height='1' fill='#3b2a1d'/>
+        <rect x='11' y='8' width='2' height='1' fill='#f4efdf'/>
+        <rect x='12' y='9' width='1' height='2' fill='#f4efdf'/>
+        <rect x='11' y='11' width='2' height='1' fill='#f4efdf'/>
+        <rect x='2' y='13' width='10' height='1' fill='#d69a45'/>
+        <rect x='5' y='2' width='1' height='2' fill='#9db894'/>
+        <rect x='8' y='1' width='1' height='2' fill='#9db894'/>
+      </svg>
+      <span>
+        <span class='logo__name'>ゆすらご</span>
+        <span class='logo__roma'>YUSURAGO / KYOTO</span>
+      </span>
+    </a>
+    <nav class='nav'>
+      <ul>
+        <li><a expr:href='data:blog.homepageUrl + &quot;#about&quot;'>店のこと</a></li>
+        <li><a expr:href='data:blog.homepageUrl + &quot;#menu&quot;'>お品書き</a></li>
+        <li><a expr:href='data:blog.homepageUrl + &quot;#room&quot;'>店内</a></li>
+        <li><a expr:href='data:blog.homepageUrl + &quot;#info&quot;'>営業案内</a></li>
+        <li><a expr:href='data:blog.homepageUrl + &quot;#diary&quot;'>日記</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+<!-- ============ ヒーロー（トップページのみ） ============ -->
+<section class='hero' id='top'>
+  <div class='wrap hero__inner'>
+    <div>
+      <p class='hero__eyebrow'>■ KISSATEN YUSURAGO ■ SINCE 19XX</p>
+      <h1 class='hero__title'>ゆすらご</h1>
+      <p class='hero__sub'>京都・○○の喫茶店<span class='cursor' aria-hidden='true'>&#160;</span></p>
+      <p class='hero__lead'>
+        鳥が啄む小さな赤い実の名前を、そのまま看板にしました。<br/>
+        ネルドリップの珈琲と自家製のおやつ。
+        はたらく手をいちど止めて、ゆっくりしていってください。
+      </p>
+      <div class='hero__cta'>
+        <a class='btn' href='#menu'>お品書きを見る</a>
+        <a class='btn btn--ghost' href='#info'>営業案内</a>
+      </div>
+    </div>
+    <svg class='hero__art' shape-rendering='crispEdges' viewBox='0 0 16 16' role='img' aria-label='珈琲カップのドット絵'>
+      <rect x='5' y='1' width='1' height='2' fill='#d9e3cd' opacity='.8'/>
+      <rect x='6' y='3' width='1' height='1' fill='#d9e3cd' opacity='.8'/>
+      <rect x='8' y='0' width='1' height='2' fill='#d9e3cd' opacity='.8'/>
+      <rect x='7' y='2' width='1' height='2' fill='#d9e3cd' opacity='.8'/>
+      <rect x='3' y='6' width='8' height='7' fill='#f4efdf'/>
+      <rect x='4' y='7' width='6' height='1' fill='#3b2a1d'/>
+      <rect x='4' y='8' width='6' height='1' fill='#5a4230'/>
+      <rect x='11' y='8' width='2' height='1' fill='#f4efdf'/>
+      <rect x='12' y='9' width='1' height='2' fill='#f4efdf'/>
+      <rect x='11' y='11' width='2' height='1' fill='#f4efdf'/>
+      <rect x='2' y='13' width='10' height='1' fill='#d69a45'/>
+      <rect x='3' y='14' width='8' height='1' fill='#b98232'/>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ お知らせ ============ -->
+<section class='notice'>
+  <div class='wrap notice__inner'>
+    <span class='notice__tag'>おしらせ</span>
+    <ul>
+      <li>○月○日（○）は都合により臨時休業いたします。</li>
+      <li>季節のおやつ「○○」はじめました。なくなり次第おしまいです。</li>
+    </ul>
+  </div>
+</section>
+</b:if>
+
+<main id='main'>
+
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+<!-- ============ 店のこと ============ -->
+<section class='section' id='about'>
+  <div class='wrap'>
+    <div class='section__head'>
+      <span class='section__label'>ABOUT</span>
+      <h2 class='section__title'>店のこと</h2>
+    </div>
+    <div class='about'>
+      <div class='about__text'>
+        <p class='about__name'>小さな実のような、小さな店です</p>
+        <p>
+          京都の○○、細い路地をひとつ入ったところで喫茶店をやっています。
+          席は○席ほど。カウンターの向こうで一杯ずつ落とす珈琲と、
+          その日の朝につくるおやつだけの、ささやかな店です。
+        </p>
+        <p>
+          建てられて○○年になる町家の、古い建具や硝子はそのまま残しました。
+          昼は坪庭からの光が、夕方には橙色の灯りが店内を満たします。
+          本を読む人、手帳を広げる人、ただぼんやりする人。
+          どなたもどうぞ、思い思いに過ごしてください。
+        </p>
+        <p>
+          おひとりさまも大歓迎です。お声がけいただければ、
+          その日の豆のことも喜んでお話しします。
+        </p>
+      </div>
+      <aside class='memo'>
+        <p class='memo__title'>▼ 店名のこと</p>
+        <p>
+          「ゆすらご」は、ゆすらうめ（山桜桃梅）の古い呼び名のひとつ。
+          初夏に小さな赤い実をつける、庭先の木です。
+        </p>
+        <p style='margin-top:1em'>
+          目立たないけれど、毎年きちんと実る。
+          そんな店でありたいと思っています。
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ お品書き ============ -->
+<section class='section section--tint' id='menu'>
+  <div class='wrap'>
+    <div class='section__head'>
+      <span class='section__label'>MENU</span>
+      <h2 class='section__title'>お品書き</h2>
+    </div>
+    <div class='win'>
+      <div class='win__bar'>
+        <span>OSHINAGAKI.TXT</span>
+        <span class='win__dots' aria-hidden='true'><i/><i/><i/></span>
+      </div>
+      <div class='win__body'>
+        <div class='menu-grid'>
+          <div>
+            <div class='menu-block'>
+              <h3 class='menu-block__title'>珈琲<span>COFFEE</span></h3>
+              <ul>
+                <li class='menu-row'><span class='menu-row__name'>ゆすらごブレンド<span class='menu-row__note'>深煎り・ネルドリップ</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥600</span></li>
+                <li class='menu-row'><span class='menu-row__name'>本日の珈琲<span class='menu-row__note'>黒板をご覧ください</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥650</span></li>
+                <li class='menu-row'><span class='menu-row__name'>アイス珈琲</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥650</span></li>
+                <li class='menu-row'><span class='menu-row__name'>ウインナー珈琲</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥750</span></li>
+              </ul>
+            </div>
+            <div class='menu-block'>
+              <h3 class='menu-block__title'>お茶とソーダ<span>TEA &amp; SODA</span></h3>
+              <ul>
+                <li class='menu-row'><span class='menu-row__name'>紅茶（ポットで）</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥650</span></li>
+                <li class='menu-row'><span class='menu-row__name'>クリームソーダ<span class='menu-row__note'>緑・青・赤からお選びください</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥750</span></li>
+                <li class='menu-row'><span class='menu-row__name'>レモンスカッシュ</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥700</span></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class='menu-block'>
+              <h3 class='menu-block__title'>おやつ<span>SWEETS</span></h3>
+              <ul>
+                <li class='menu-row'><span class='menu-row__name'>自家製プリン<span class='menu-row__note'>かために焼いています</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥550</span></li>
+                <li class='menu-row'><span class='menu-row__name'>季節のケーキ</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥600</span></li>
+                <li class='menu-row'><span class='menu-row__name'>あんバタートースト</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥600</span></li>
+              </ul>
+            </div>
+            <div class='menu-block'>
+              <h3 class='menu-block__title'>軽食<span>LIGHT MEAL</span></h3>
+              <ul>
+                <li class='menu-row'><span class='menu-row__name'>ナポリタン<span class='menu-row__note'>鉄板でお出しします</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥950</span></li>
+                <li class='menu-row'><span class='menu-row__name'>玉子サンド</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥850</span></li>
+                <li class='menu-row'><span class='menu-row__name'>モーニング<span class='menu-row__note'>開店〜11:00・お飲みもの＋￥200</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>+¥200</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class='menu-note'>＊価格はすべて税込です。＊仕入れにより内容が変わることがあります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 店内 ============ -->
+<section class='section' id='room'>
+  <div class='wrap'>
+    <div class='section__head'>
+      <span class='section__label'>ROOM</span>
+      <h2 class='section__title'>店内のようす</h2>
+    </div>
+    <div class='gallery'>
+      <div class='frame frame--empty'><span>PHOTO 01</span><span class='frame__cap'>カウンター席</span></div>
+      <div class='frame frame--empty'><span>PHOTO 02</span><span class='frame__cap'>坪庭と窓辺</span></div>
+      <div class='frame frame--empty'><span>PHOTO 03</span><span class='frame__cap'>本棚とレコード</span></div>
+      <div class='frame frame--empty'><span>PHOTO 04</span><span class='frame__cap'>自家製プリン</span></div>
+      <div class='frame frame--empty'><span>PHOTO 05</span><span class='frame__cap'>クリームソーダ</span></div>
+      <div class='frame frame--empty'><span>PHOTO 06</span><span class='frame__cap'>看板と暖簾</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 営業案内 ============ -->
+<section class='section section--tint' id='info'>
+  <div class='wrap'>
+    <div class='section__head'>
+      <span class='section__label'>INFORMATION</span>
+      <h2 class='section__title'>営業案内</h2>
+    </div>
+    <div class='win'>
+      <div class='win__bar'>
+        <span>EIGYO.SYS</span>
+        <span class='win__dots' aria-hidden='true'><i/><i/><i/></span>
+      </div>
+      <div class='win__body'>
+        <div class='info'>
+          <div>
+            <table class='hours'>
+              <caption>▼ 営業時間</caption>
+              <tbody>
+                <tr><th scope='row'>月曜</th><td class='is-closed'>定休日</td></tr>
+                <tr><th scope='row'>火曜</th><td class='is-closed'>定休日</td></tr>
+                <tr><th scope='row'>水曜</th><td>09:00 – 18:00</td></tr>
+                <tr><th scope='row'>木曜</th><td>09:00 – 18:00</td></tr>
+                <tr><th scope='row'>金曜</th><td>09:00 – 18:00</td></tr>
+                <tr><th scope='row'>土曜</th><td>09:00 – 19:00</td></tr>
+                <tr><th scope='row'>日曜</th><td>09:00 – 19:00</td></tr>
+              </tbody>
+            </table>
+            <p class='menu-note'>
+              ＊ラストオーダーは閉店の30分前です。<br/>
+              ＊臨時休業は日記とSNSでお知らせします。
+            </p>
+          </div>
+          <div>
+            <dl class='dl'>
+              <div><dt>店名</dt><dd>ゆすらご</dd></div>
+              <div><dt>住所</dt><dd>〒600-0000<br/>京都市○○区○○町○○−○</dd></div>
+              <div><dt>電話</dt><dd><a href='tel:+81750000000'>075-000-0000</a></dd></div>
+              <div><dt>最寄り</dt><dd>○○線「○○」駅より徒歩○分</dd></div>
+              <div><dt>席数</dt><dd>カウンター○席／テーブル○席</dd></div>
+              <div><dt>支払い</dt><dd>現金・各種QR決済</dd></div>
+              <div><dt>そのほか</dt><dd>全席禁煙／Wi-Fiあり／予約不可</dd></div>
+            </dl>
+            <div class='map'>
+              <div class='frame frame--empty' style='border:0;box-shadow:none;aspect-ratio:16/9'>
+                <span>MAP — 地図を埋め込んでください</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</b:if>
+
+<!-- ============ 日記（Blogger の投稿） ============ -->
+<section class='section' id='diary'>
+  <div class='wrap'>
+    <b:if cond='data:blog.url == data:blog.homepageUrl'>
+      <div class='section__head'>
+        <span class='section__label'>DIARY</span>
+        <h2 class='section__title'>日記</h2>
+      </div>
+    </b:if>
+
+    <b:section id='diarybody' showaddelement='no'>
+      <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog' version='1'>
+        <b:includable id='main'>
+          <b:if cond='data:blog.pageType == &quot;index&quot;'>
+            <div class='posts'>
+              <b:loop values='data:posts' var='post'>
+                <a class='post' expr:href='data:post.url'>
+                  <span class='post__date'><data:post.dateHeader/><data:post.timestamp/></span>
+                  <span class='post__title'><data:post.title/></span>
+                  <span class='post__more'>つづきを読む →</span>
+                </a>
+              </b:loop>
+            </div>
+          <b:else/>
+            <b:loop values='data:posts' var='post'>
+              <article class='win entry'>
+                <div class='win__bar'>
+                  <span><data:post.timestamp/></span>
+                  <span class='win__dots' aria-hidden='true'><i/><i/><i/></span>
+                </div>
+                <div class='win__body'>
+                  <h1 class='entry__title'><data:post.title/></h1>
+                  <div class='entry__body'><data:post.body/></div>
+                </div>
+              </article>
+            </b:loop>
+          </b:if>
+
+          <div class='pager'>
+            <b:if cond='data:newerPageUrl'>
+              <a class='btn' expr:href='data:newerPageUrl'>← 新しい日記</a>
+            </b:if>
+            <b:if cond='data:blog.pageType != &quot;index&quot;'>
+              <a class='btn' expr:href='data:blog.homepageUrl'>トップへもどる</a>
+            </b:if>
+            <b:if cond='data:olderPageUrl'>
+              <a class='btn' expr:href='data:olderPageUrl'>古い日記 →</a>
+            </b:if>
+          </div>
+        </b:includable>
+      </b:widget>
+    </b:section>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ フッター ============ -->
+<footer class='site-footer'>
+  <div class='wrap'>
+    <div class='footer__grid'>
+      <div>
+        <p class='footer__name'>ゆすらご</p>
+        <p class='footer__roma'>KISSATEN YUSURAGO — KYOTO, JAPAN</p>
+        <p class='footer__addr'>
+          〒600-0000 京都市○○区○○町○○−○<br/>
+          075-000-0000／月・火 定休
+        </p>
+        <div class='sns'>
+          <a expr:href='data:blog.homepageUrl'>BLOG</a>
+          <a href='https://www.instagram.com/'>INSTAGRAM</a>
+          <a href='https://x.com/'>X</a>
+        </div>
+      </div>
+      <div>
+        <p class='counter'>あなたは <b>0000001</b> 人目のお客さまです</p>
+      </div>
+    </div>
+    <p class='copyright'>© ゆすらご　—　ごゆっくりどうぞ</p>
+  </div>
+</footer>
+
+</body>
+</html>

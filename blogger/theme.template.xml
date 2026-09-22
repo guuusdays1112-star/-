@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<meta content='#4c6b48' name='theme-color'/>
+<b:include data='blog' name='all-head-content'/>
+<title><data:blog.pageTitle/></title>
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=DotGothic16&amp;family=Shippori+Mincho+B1:wght@500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap' rel='stylesheet'/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%234c6b48'/%3E%3Crect x='3' y='6' width='8' height='7' fill='%23f4efdf'/%3E%3Crect x='2' y='13' width='10' height='1' fill='%23d69a45'/%3E%3C/svg%3E" rel='icon'/>
+
+<b:skin><![CDATA[
+/*@STYLE@*/
+
+/* ---------- Blogger 記事本文むけの追記 ---------- */
+.entry{margin-bottom:2em}
+.entry__title{font-size:clamp(1.4rem,4vw,1.9rem);letter-spacing:.12em;margin-bottom:.8em}
+.entry__title a{text-decoration:none}
+.entry__body{line-height:2.05}
+.entry__body img{border:2px solid var(--frame);box-shadow:4px 4px 0 var(--shadow-color);margin:1.4em 0}
+.entry__body h2,.entry__body h3{margin:1.8em 0 .6em}
+.entry__body a{color:var(--moss)}
+.entry__body blockquote{
+  margin:1.4em 0;padding:.8em 1.2em;
+  border-left:4px solid var(--sage);background:var(--pale);
+}
+.pager{display:flex;gap:.8em;justify-content:center;flex-wrap:wrap;margin-top:2.4em}
+.widget-item-control,.quickedit,.post-feeds,.feed-links{display:none}
+]]></b:skin>
+</head>
+
+<body>
+<a class='skip' href='#main'>本文へスキップ</a>
+
+<!-- ============ ヘッダー ============ -->
+<header class='site-header'>
+  <div class='wrap site-header__inner'>
+    <a class='logo' expr:href='data:blog.homepageUrl'>
+      <svg class='logo__mark' shape-rendering='crispEdges' viewBox='0 0 16 16' aria-hidden='true'>
+        <rect width='16' height='16' fill='#4c6b48'/>
+        <rect x='3' y='6' width='8' height='7' fill='#f4efdf'/>
+        <rect x='4' y='7' width='6' height='1' fill='#3b2a1d'/>
+        <rect x='11' y='8' width='2' height='1' fill='#f4efdf'/>
+        <rect x='12' y='9' width='1' height='2' fill='#f4efdf'/>
+        <rect x='11' y='11' width='2' height='1' fill='#f4efdf'/>
+        <rect x='2' y='13' width='10' height='1' fill='#d69a45'/>
+        <rect x='5' y='2' width='1' height='2' fill='#9db894'/>
+        <rect x='8' y='1' width='1' height='2' fill='#9db894'/>
+      </svg>
+      <span>
+        <span class='logo__name'>ゆすらご</span>
+        <span class='logo__roma'>YUSURAGO / KYOTO</span>
+      </span>
+    </a>
+    <nav class='nav'>
+      <ul>
+        <li><a expr:href='data:blog.homepageUrl + &quot;#about&quot;'>店のこと</a></li>
+        <li><a expr:href='data:blog.homepageUrl + &quot;#menu&quot;'>お品書き</a></li>
+        <li><a expr:href='data:blog.homepageUrl + &quot;#room&quot;'>店内</a></li>
+        <li><a expr:href='data:blog.homepageUrl + &quot;#info&quot;'>営業案内</a></li>
+        <li><a expr:href='data:blog.homepageUrl + &quot;#diary&quot;'>日記</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+<!-- ============ ヒーロー（トップページのみ） ============ -->
+<section class='hero' id='top'>
+  <div class='wrap hero__inner'>
+    <div>
+      <p class='hero__eyebrow'>■ KISSATEN YUSURAGO ■ SINCE 19XX</p>
+      <h1 class='hero__title'>ゆすらご</h1>
+      <p class='hero__sub'>京都・○○の喫茶店<span class='cursor' aria-hidden='true'>&#160;</span></p>
+      <p class='hero__lead'>
+        鳥が啄む小さな赤い実の名前を、そのまま看板にしました。<br/>
+        ネルドリップの珈琲と自家製のおやつ。
+        はたらく手をいちど止めて、ゆっくりしていってください。
+      </p>
+      <div class='hero__cta'>
+        <a class='btn' href='#menu'>お品書きを見る</a>
+        <a class='btn btn--ghost' href='#info'>営業案内</a>
+      </div>
+    </div>
+    <svg class='hero__art' shape-rendering='crispEdges' viewBox='0 0 16 16' role='img' aria-label='珈琲カップのドット絵'>
+      <rect x='5' y='1' width='1' height='2' fill='#d9e3cd' opacity='.8'/>
+      <rect x='6' y='3' width='1' height='1' fill='#d9e3cd' opacity='.8'/>
+      <rect x='8' y='0' width='1' height='2' fill='#d9e3cd' opacity='.8'/>
+      <rect x='7' y='2' width='1' height='2' fill='#d9e3cd' opacity='.8'/>
+      <rect x='3' y='6' width='8' height='7' fill='#f4efdf'/>
+      <rect x='4' y='7' width='6' height='1' fill='#3b2a1d'/>
+      <rect x='4' y='8' width='6' height='1' fill='#5a4230'/>
+      <rect x='11' y='8' width='2' height='1' fill='#f4efdf'/>
+      <rect x='12' y='9' width='1' height='2' fill='#f4efdf'/>
+      <rect x='11' y='11' width='2' height='1' fill='#f4efdf'/>
+      <rect x='2' y='13' width='10' height='1' fill='#d69a45'/>
+      <rect x='3' y='14' width='8' height='1' fill='#b98232'/>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ お知らせ ============ -->
+<section class='notice'>
+  <div class='wrap notice__inner'>
+    <span class='notice__tag'>おしらせ</span>
+    <ul>
+      <li>○月○日（○）は都合により臨時休業いたします。</li>
+      <li>季節のおやつ「○○」はじめました。なくなり次第おしまいです。</li>
+    </ul>
+  </div>
+</section>
+</b:if>
+
+<main id='main'>
+
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+<!-- ============ 店のこと ============ -->
+<section class='section' id='about'>
+  <div class='wrap'>
+    <div class='section__head'>
+      <span class='section__label'>ABOUT</span>
+      <h2 class='section__title'>店のこと</h2>
+    </div>
+    <div class='about'>
+      <div class='about__text'>
+        <p class='about__name'>小さな実のような、小さな店です</p>
+        <p>
+          京都の○○、細い路地をひとつ入ったところで喫茶店をやっています。
+          席は○席ほど。カウンターの向こうで一杯ずつ落とす珈琲と、
+          その日の朝につくるおやつだけの、ささやかな店です。
+        </p>
+        <p>
+          建てられて○○年になる町家の、古い建具や硝子はそのまま残しました。
+          昼は坪庭からの光が、夕方には橙色の灯りが店内を満たします。
+          本を読む人、手帳を広げる人、ただぼんやりする人。
+          どなたもどうぞ、思い思いに過ごしてください。
+        </p>
+        <p>
+          おひとりさまも大歓迎です。お声がけいただければ、
+          その日の豆のことも喜んでお話しします。
+        </p>
+      </div>
+      <aside class='memo'>
+        <p class='memo__title'>▼ 店名のこと</p>
+        <p>
+          「ゆすらご」は、ゆすらうめ（山桜桃梅）の古い呼び名のひとつ。
+          初夏に小さな赤い実をつける、庭先の木です。
+        </p>
+        <p style='margin-top:1em'>
+          目立たないけれど、毎年きちんと実る。
+          そんな店でありたいと思っています。
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ お品書き ============ -->
+<section class='section section--tint' id='menu'>
+  <div class='wrap'>
+    <div class='section__head'>
+      <span class='section__label'>MENU</span>
+      <h2 class='section__title'>お品書き</h2>
+    </div>
+    <div class='win'>
+      <div class='win__bar'>
+        <span>OSHINAGAKI.TXT</span>
+        <span class='win__dots' aria-hidden='true'><i/><i/><i/></span>
+      </div>
+      <div class='win__body'>
+        <div class='menu-grid'>
+          <div>
+            <div class='menu-block'>
+              <h3 class='menu-block__title'>珈琲<span>COFFEE</span></h3>
+              <ul>
+                <li class='menu-row'><span class='menu-row__name'>ゆすらごブレンド<span class='menu-row__note'>深煎り・ネルドリップ</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥600</span></li>
+                <li class='menu-row'><span class='menu-row__name'>本日の珈琲<span class='menu-row__note'>黒板をご覧ください</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥650</span></li>
+                <li class='menu-row'><span class='menu-row__name'>アイス珈琲</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥650</span></li>
+                <li class='menu-row'><span class='menu-row__name'>ウインナー珈琲</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥750</span></li>
+              </ul>
+            </div>
+            <div class='menu-block'>
+              <h3 class='menu-block__title'>お茶とソーダ<span>TEA &amp; SODA</span></h3>
+              <ul>
+                <li class='menu-row'><span class='menu-row__name'>紅茶（ポットで）</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥650</span></li>
+                <li class='menu-row'><span class='menu-row__name'>クリームソーダ<span class='menu-row__note'>緑・青・赤からお選びください</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥750</span></li>
+                <li class='menu-row'><span class='menu-row__name'>レモンスカッシュ</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥700</span></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class='menu-block'>
+              <h3 class='menu-block__title'>おやつ<span>SWEETS</span></h3>
+              <ul>
+                <li class='menu-row'><span class='menu-row__name'>自家製プリン<span class='menu-row__note'>かために焼いています</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥550</span></li>
+                <li class='menu-row'><span class='menu-row__name'>季節のケーキ</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥600</span></li>
+                <li class='menu-row'><span class='menu-row__name'>あんバタートースト</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥600</span></li>
+              </ul>
+            </div>
+            <div class='menu-block'>
+              <h3 class='menu-block__title'>軽食<span>LIGHT MEAL</span></h3>
+              <ul>
+                <li class='menu-row'><span class='menu-row__name'>ナポリタン<span class='menu-row__note'>鉄板でお出しします</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥950</span></li>
+                <li class='menu-row'><span class='menu-row__name'>玉子サンド</span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>¥850</span></li>
+                <li class='menu-row'><span class='menu-row__name'>モーニング<span class='menu-row__note'>開店〜11:00・お飲みもの＋￥200</span></span><span class='menu-row__lead' aria-hidden='true'/><span class='menu-row__price'>+¥200</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class='menu-note'>＊価格はすべて税込です。＊仕入れにより内容が変わることがあります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 店内 ============ -->
+<section class='section' id='room'>
+  <div class='wrap'>
+    <div class='section__head'>
+      <span class='section__label'>ROOM</span>
+      <h2 class='section__title'>店内のようす</h2>
+    </div>
+    <div class='gallery'>
+      <div class='frame frame--empty'><span>PHOTO 01</span><span class='frame__cap'>カウンター席</span></div>
+      <div class='frame frame--empty'><span>PHOTO 02</span><span class='frame__cap'>坪庭と窓辺</span></div>
+      <div class='frame frame--empty'><span>PHOTO 03</span><span class='frame__cap'>本棚とレコード</span></div>
+      <div class='frame frame--empty'><span>PHOTO 04</span><span class='frame__cap'>自家製プリン</span></div>
+      <div class='frame frame--empty'><span>PHOTO 05</span><span class='frame__cap'>クリームソーダ</span></div>
+      <div class='frame frame--empty'><span>PHOTO 06</span><span class='frame__cap'>看板と暖簾</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 営業案内 ============ -->
+<section class='section section--tint' id='info'>
+  <div class='wrap'>
+    <div class='section__head'>
+      <span class='section__label'>INFORMATION</span>
+      <h2 class='section__title'>営業案内</h2>
+    </div>
+    <div class='win'>
+      <div class='win__bar'>
+        <span>EIGYO.SYS</span>
+        <span class='win__dots' aria-hidden='true'><i/><i/><i/></span>
+      </div>
+      <div class='win__body'>
+        <div class='info'>
+          <div>
+            <table class='hours'>
+              <caption>▼ 営業時間</caption>
+              <tbody>
+                <tr><th scope='row'>月曜</th><td class='is-closed'>定休日</td></tr>
+                <tr><th scope='row'>火曜</th><td class='is-closed'>定休日</td></tr>
+                <tr><th scope='row'>水曜</th><td>09:00 – 18:00</td></tr>
+                <tr><th scope='row'>木曜</th><td>09:00 – 18:00</td></tr>
+                <tr><th scope='row'>金曜</th><td>09:00 – 18:00</td></tr>
+                <tr><th scope='row'>土曜</th><td>09:00 – 19:00</td></tr>
+                <tr><th scope='row'>日曜</th><td>09:00 – 19:00</td></tr>
+              </tbody>
+            </table>
+            <p class='menu-note'>
+              ＊ラストオーダーは閉店の30分前です。<br/>
+              ＊臨時休業は日記とSNSでお知らせします。
+            </p>
+          </div>
+          <div>
+            <dl class='dl'>
+              <div><dt>店名</dt><dd>ゆすらご</dd></div>
+              <div><dt>住所</dt><dd>〒600-0000<br/>京都市○○区○○町○○−○</dd></div>
+              <div><dt>電話</dt><dd><a href='tel:+81750000000'>075-000-0000</a></dd></div>
+              <div><dt>最寄り</dt><dd>○○線「○○」駅より徒歩○分</dd></div>
+              <div><dt>席数</dt><dd>カウンター○席／テーブル○席</dd></div>
+              <div><dt>支払い</dt><dd>現金・各種QR決済</dd></div>
+              <div><dt>そのほか</dt><dd>全席禁煙／Wi-Fiあり／予約不可</dd></div>
+            </dl>
+            <div class='map'>
+              <div class='frame frame--empty' style='border:0;box-shadow:none;aspect-ratio:16/9'>
+                <span>MAP — 地図を埋め込んでください</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</b:if>
+
+<!-- ============ 日記（Blogger の投稿） ============ -->
+<section class='section' id='diary'>
+  <div class='wrap'>
+    <b:if cond='data:blog.url == data:blog.homepageUrl'>
+      <div class='section__head'>
+        <span class='section__label'>DIARY</span>
+        <h2 class='section__title'>日記</h2>
+      </div>
+    </b:if>
+
+    <b:section id='diarybody' showaddelement='no'>
+      <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog' version='1'>
+        <b:includable id='main'>
+          <b:if cond='data:blog.pageType == &quot;index&quot;'>
+            <div class='posts'>
+              <b:loop values='data:posts' var='post'>
+                <a class='post' expr:href='data:post.url'>
+                  <span class='post__date'><data:post.dateHeader/><data:post.timestamp/></span>
+                  <span class='post__title'><data:post.title/></span>
+                  <span class='post__more'>つづきを読む →</span>
+                </a>
+              </b:loop>
+            </div>
+          <b:else/>
+            <b:loop values='data:posts' var='post'>
+              <article class='win entry'>
+                <div class='win__bar'>
+                  <span><data:post.timestamp/></span>
+                  <span class='win__dots' aria-hidden='true'><i/><i/><i/></span>
+                </div>
+                <div class='win__body'>
+                  <h1 class='entry__title'><data:post.title/></h1>
+                  <div class='entry__body'><data:post.body/></div>
+                </div>
+              </article>
+            </b:loop>
+          </b:if>
+
+          <div class='pager'>
+            <b:if cond='data:newerPageUrl'>
+              <a class='btn' expr:href='data:newerPageUrl'>← 新しい日記</a>
+            </b:if>
+            <b:if cond='data:blog.pageType != &quot;index&quot;'>
+              <a class='btn' expr:href='data:blog.homepageUrl'>トップへもどる</a>
+            </b:if>
+            <b:if cond='data:olderPageUrl'>
+              <a class='btn' expr:href='data:olderPageUrl'>古い日記 →</a>
+            </b:if>
+          </div>
+        </b:includable>
+      </b:widget>
+    </b:section>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ フッター ============ -->
+<footer class='site-footer'>
+  <div class='wrap'>
+    <div class='footer__grid'>
+      <div>
+        <p class='footer__name'>ゆすらご</p>
+        <p class='footer__roma'>KISSATEN YUSURAGO — KYOTO, JAPAN</p>
+        <p class='footer__addr'>
+          〒600-0000 京都市○○区○○町○○−○<br/>
+          075-000-0000／月・火 定休
+        </p>
+        <div class='sns'>
+          <a expr:href='data:blog.homepageUrl'>BLOG</a>
+          <a href='https://www.instagram.com/'>INSTAGRAM</a>
+          <a href='https://x.com/'>X</a>
+        </div>
+      </div>
+      <div>
+        <p class='counter'>あなたは <b>0000001</b> 人目のお客さまです</p>
+      </div>
+    </div>
+    <p class='copyright'>© ゆすらご　—　ごゆっくりどうぞ</p>
+  </div>
+</footer>
+
+</body>
+</html>
