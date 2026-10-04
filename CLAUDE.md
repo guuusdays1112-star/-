@@ -31,7 +31,6 @@ Claude はここで、制作パートナー兼アシスタントとして働く�
 |---|---|
 | `clients/` | 案件。1案件1フォルダ（`clients/<案件名>/`） |
 | `sns/shiori/` | Instagram「栞｜純喫茶巡り」の企画・分析・台本 |
-| `sns/paku-diary/` | ぱく日記 |
 | `portfolio/` | 実績・作品のまとめ |
 | `web/` | Webサイトの原稿・構成・コード |
 
