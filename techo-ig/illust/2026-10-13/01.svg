@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 640" width="950" height="640" role="img">
+  <rect x="164" y="194" width="220" height="360" rx="12" fill="#E8E0D2" stroke="#2B2B2B" stroke-width="4"/>
+  <rect x="110" y="140" width="220" height="360" rx="12" fill="#FBF8F2" stroke="#2B2B2B" stroke-width="4"/>
+  <line x1="296" y1="138" x2="296" y2="502" stroke="#C8553D" stroke-width="7" stroke-linecap="round"/>
+  <text x="220.0" y="590" font-size="30" fill="#8A8478" text-anchor="middle" font-weight="700" font-family='"Body", sans-serif'>1日1ページ</text>
+  <rect x="411" y="196" width="200" height="330" rx="12" fill="#E8E0D2" stroke="#2B2B2B" stroke-width="4"/>
+  <rect x="385" y="170" width="200" height="330" rx="12" fill="#FBF8F2" stroke="#2B2B2B" stroke-width="4"/>
+  <line x1="551" y1="168" x2="551" y2="502" stroke="#C8553D" stroke-width="7" stroke-linecap="round"/>
+  <text x="485.0" y="590" font-size="30" fill="#8A8478" text-anchor="middle" font-weight="700" font-family='"Body", sans-serif'>週間</text>
+  <rect x="650" y="200" width="190" height="310" rx="12" fill="#E8E0D2" stroke="#2B2B2B" stroke-width="4"/>
+  <rect x="640" y="190" width="190" height="310" rx="12" fill="#FBF8F2" stroke="#2B2B2B" stroke-width="4"/>
+  <line x1="796" y1="188" x2="796" y2="502" stroke="#C8553D" stroke-width="7" stroke-linecap="round"/>
+  <text x="735.0" y="590" font-size="30" fill="#8A8478" text-anchor="middle" font-weight="700" font-family='"Body", sans-serif'>日付なし</text>
+  <rect x="347.0" y="49.0" width="256" height="62" rx="31.0" fill="#C8553D" stroke="#C8553D" stroke-width="0"/>
+  <text x="475" y="92.24" font-size="34" fill="#FFFFFF" text-anchor="middle" font-weight="700" font-family='"Body", sans-serif'>どれにする？</text>
+  <path d="M455 112 L475 136 L495 112" stroke="#C8553D" stroke-width="0" fill="#C8553D" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

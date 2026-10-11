@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 640" width="950" height="640" role="img">
+  <rect x="190" y="240" width="250" height="330" rx="12" fill="#E8E0D2" stroke="#2B2B2B" stroke-width="4"/>
+  <rect x="120" y="170" width="250" height="330" rx="12" fill="#FBF8F2" stroke="#2B2B2B" stroke-width="4"/>
+  <line x1="336" y1="168" x2="336" y2="502" stroke="#C8553D" stroke-width="7" stroke-linecap="round"/>
+  <line x1="160" y1="230" x2="320" y2="230" stroke="#8A8478" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="160" y1="266" x2="320" y2="266" stroke="#8A8478" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="160" y1="302" x2="320" y2="302" stroke="#8A8478" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="160" y1="338" x2="320" y2="338" stroke="#8A8478" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="160" y1="374" x2="320" y2="374" stroke="#8A8478" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="160" y1="410" x2="320" y2="410" stroke="#8A8478" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="160" y1="446" x2="320" y2="446" stroke="#8A8478" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="180.0" y="50.0" width="180" height="60" rx="30.0" fill="#C8553D" stroke="#C8553D" stroke-width="0"/>
+  <text x="270" y="91.52" font-size="32" fill="#FFFFFF" text-anchor="middle" font-weight="700" font-family='"Body", sans-serif'>たくさん</text>
+  <text x="270" y="620" font-size="34" fill="#2B2B2B" text-anchor="middle" font-weight="700" font-family='"Body", sans-serif'>1日1ページ</text>
+  <rect x="610" y="220" width="250" height="300" rx="12" fill="#E8E0D2" stroke="#2B2B2B" stroke-width="4"/>
+  <rect x="600" y="210" width="250" height="300" rx="12" fill="#FBF8F2" stroke="#2B2B2B" stroke-width="4"/>
+  <line x1="816" y1="208" x2="816" y2="512" stroke="#C8553D" stroke-width="7" stroke-linecap="round"/>
+  <rect x="628" y="250" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="668" y="250" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="708" y="250" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="748" y="250" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="788" y="250" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="628" y="300" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="668" y="300" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="708" y="300" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="748" y="300" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="788" y="300" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="628" y="350" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="668" y="350" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="708" y="350" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="748" y="350" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="788" y="350" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="628" y="400" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="668" y="400" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="708" y="400" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="748" y="400" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="788" y="400" width="34" height="42" rx="3" fill="#FBF8F2" stroke="#8A8478" stroke-width="2"/>
+  <rect x="667.0" y="50.0" width="116" height="60" rx="30.0" fill="#C8553D" stroke="#C8553D" stroke-width="0"/>
+  <text x="725" y="91.52" font-size="32" fill="#FFFFFF" text-anchor="middle" font-weight="700" font-family='"Body", sans-serif'>少し</text>
+  <text x="725" y="620" font-size="34" fill="#2B2B2B" text-anchor="middle" font-weight="700" font-family='"Body", sans-serif'>月1枚（マンスリー）</text>
+</svg>
