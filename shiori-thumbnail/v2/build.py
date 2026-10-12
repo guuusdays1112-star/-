@@ -69,7 +69,7 @@ def design_b(slide, photo, ov, c):
     add_text(slide, 152, 1178, 760, 110, c["title"][1], font=MINCHO, size=84, color=BROWN,
              spacing=2, bold=True, name="10_メインタイトル（2行目）")
     add_line(slide, 820, 1112, 1024, 1112, AMBER, 2, "11_装飾線（特集）")
-    add_text(slide, 760, 1126, 264, 80, c["sub"], font=MINCHO, size=22, color=BROWN,
+    add_text(slide, 664, 1126, 360, 80, c["sub"], font=MINCHO, size=22, color=BROWN,
              spacing=3, line_height=1.5, align="r", name="12_サブタイトル")
 
 
