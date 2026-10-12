@@ -37,7 +37,7 @@ BORDEAUX = "6E2F35"
 WHITE = "FFFBF3"   # 純白ではなく、わずかにアイボリー寄りの白
 
 # ── フォント（Canva 上に同名で存在するもの） ──────
-F_BOLD = "Zen Old Mincho"           # A案：太い明朝（Bold 指定）
+F_BOLD = "Shippori Mincho"          # A案：太い明朝（Bold 指定。Canva に Zen Old Mincho が無いため）
 F_TITLE = "Shippori Mincho"         # B案：本文明朝
 F_TITLE_XB = "Shippori Mincho"     # C案（Bold 指定）
 F_LATIN = "Cormorant Garamond"
