@@ -37,9 +37,9 @@ BORDEAUX = "6E2F35"
 WHITE = "FFFBF3"   # 純白ではなく、わずかにアイボリー寄りの白
 
 # ── フォント（Canva 上に同名で存在するもの） ──────
-F_BOLD = "Zen Old Mincho Black"     # A案：太い明朝
+F_BOLD = "Zen Old Mincho"           # A案：太い明朝（Bold 指定）
 F_TITLE = "Shippori Mincho"         # B案：本文明朝
-F_TITLE_XB = "Shippori Mincho ExtraBold"  # C案
+F_TITLE_XB = "Shippori Mincho"     # C案（Bold 指定）
 F_LATIN = "Cormorant Garamond"
 
 
@@ -112,7 +112,7 @@ def add_line(slide, x1, y1, x2, y2, color, weight_px, name="Line"):
 
 def add_text(slide, x, y, w, h, lines, *, font, size, color, spacing=0,
              line_height=1.0, align="l", rotation=0, name="Text",
-             latin_font=None, anchor="t"):
+             latin_font=None, anchor="t", bold=False):
     """lines: str か [(text, {override})] のリスト。1行=1段落。
     spacing: 字間(px) / line_height: 行送り倍率"""
     tb = slide.shapes.add_textbox(px(x), px(y), px(w), px(h))
@@ -136,6 +136,7 @@ def add_text(slide, x, y, w, h, lines, *, font, size, color, spacing=0,
         r.text = text
         f = r.font
         f.size = pt_from_px(ov.get("size", size))
+        f.bold = ov.get("bold", bold)
         f.color.rgb = RGBColor.from_string(ov.get("color", color))
         rPr = r._r.get_or_add_rPr()
         sp = ov.get("spacing", spacing)
@@ -165,12 +166,11 @@ def design_a(slide, photo, ov, c):
     add_picture(slide, ov, 0, 0, W, 660, "02_オーバーレイ（上部の陰影）")
     add_text(slide, 92, 78, 900, 44, c["sub"], font=F_TITLE, size=30, color=WHITE,
              spacing=4, name="03_サブタイトル")
-    add_text(slide, 70, 128, 960, 330, [
-        (c["title"][0], {"size": 112}),
-        (c["title"][1], {"size": 156, "indent": 170}),
-    ], font=F_BOLD, size=112, color=WHITE, spacing=-4, line_height=1.04,
-        rotation=-4, name="04_メインタイトル")
-    add_line(slide, 262, 478, 700, 448, AMBER_LIGHT, 6, "05_装飾線（琥珀のアンダーライン）")
+    add_text(slide, 70, 150, 940, 130, c["title"][0], font=F_BOLD, size=112, color=WHITE,
+             spacing=-4, bold=True, rotation=-4, name="04_メインタイトル（1行目）")
+    add_text(slide, 236, 284, 700, 180, c["title"][1], font=F_BOLD, size=156, color=WHITE,
+             spacing=-4, bold=True, rotation=-4, name="05_メインタイトル（2行目）")
+    add_line(slide, 262, 498, 700, 468, AMBER_LIGHT, 6, "06_装飾線（琥珀のアンダーライン）")
 
 
 def design_b(slide, photo, ov, c):
@@ -195,11 +195,10 @@ def design_c(slide, photo, ov, c):
     add_line(slide, 92, 101, 140, 101, AMBER_LIGHT, 3, "03_装飾線")
     add_text(slide, 156, 82, 800, 40, c["eyebrow"], font=F_LATIN, size=26, color=WHITE,
              spacing=6, name="04_アイブロウ（欧文）")
-    add_text(slide, 80, 136, 960, 280, [
-        (c["title"][0], {}),
-        (c["title"][1], {"indent": 128}),
-    ], font=F_TITLE_XB, size=102, color=WHITE, spacing=-2, line_height=1.14,
-        name="05_メインタイトル")
+    add_text(slide, 80, 150, 940, 120, c["title"][0], font=F_TITLE_XB, size=102, color=WHITE,
+             spacing=-2, bold=True, name="05_メインタイトル（1行目）")
+    add_text(slide, 208, 266, 860, 120, c["title"][1], font=F_TITLE_XB, size=102, color=WHITE,
+             spacing=-2, bold=True, name="05_メインタイトル（2行目）")
     add_text(slide, 212, 440, 800, 40, c["sub"], font=F_TITLE, size=28, color=WHITE,
              spacing=5, name="06_サブタイトル")
 
